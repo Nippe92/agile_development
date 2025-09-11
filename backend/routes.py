@@ -1,15 +1,4 @@
-from  flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    """
-    Denna funktion körs när någon besöker din hemsidas startsida
-    @app.route('/') dekoratören betyder att denna funktion hanterar förfrågningar till rot-URL:en
-    """
-    return '<h1>Hello, World!</h1>'
-
+from app import app
 
 @app.route('/about')
 def about():
