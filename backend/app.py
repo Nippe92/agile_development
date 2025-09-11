@@ -6,7 +6,7 @@ import requests
 import os
 
 app = Flask(__name__)
-app.config.from_object("config.Config")
+app.config.from_object("backend.config.Config")
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
