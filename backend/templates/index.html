@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Välkommen till FlaskApp</h1>
+  {% if current_user.is_authenticated %}
+    <p>Inloggad som {{ current_user.username }}</p>
+  {% else %}
+    <p>Du är inte inloggad.</p>
+  {% endif %}
+
+  <div class="mt-4 d-flex gap-3">
+    <a href="https://agileutveckling.atlassian.net/jira/software/projects/SCRUM/boards/1?sprintStarted=true"
+       target="_blank"
+       class="btn btn-lg btn-primary shadow">
+      📋 Gå till Jira Board
+    </a>
+
+    <a href="https://github.com/Nippe92/agile_development"
+       target="_blank"
+       class="btn btn-lg btn-dark shadow">
+      💻 Gå till GitHub Repo
+    </a>
+  </div>
+{% endblock %}

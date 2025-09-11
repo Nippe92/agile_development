@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Väder</h2>
+  <form method="POST">
+    <div class="mb-3">
+      <label for="city" class="form-label">Stad</label>
+      <input type="text" name="city" class="form-control" placeholder="Skriv en stad...">
+    </div>
+    <button type="submit" class="btn btn-primary">Hämta väder</button>
+  </form>
+
+  {% if weather %}
+    <div class="mt-4">
+      <h3>{{ weather.name }}</h3>
+      <p>{{ weather.weather[0].description | capitalize }}</p>
+      <p>Temperatur: {{ weather.main.temp }}°C</p>
+      <p>Vind: {{ weather.wind.speed }} m/s</p>
+    </div>
+  {% endif %}
+{% endblock %}

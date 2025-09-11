@@ -1,2 +1,7 @@
+flask
+flask_sqlalchemy
+flask_login
 gunicorn
-Flask
+psycopg2-binary
+werkzeug
+requests
